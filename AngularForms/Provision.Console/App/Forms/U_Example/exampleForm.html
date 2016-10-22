@@ -1,0 +1,67 @@
+﻿<div ng-app="app" ng-controller="MainCtrl" id='MainCtrl' ng-cloak>
+    <h2>{{ListTitle}}</h2>
+    <hr>
+    <ng-form name="mainForm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="button" class="btn btn-primary save-btn" value="Cancel" ng-click="cancel()"/>
+                    <input type="button" class="btn btn-primary save-btn" value="Save"   ng-click="save()" /> 
+                </div>
+            </div>
+        
+            <div data-ng-include="'../../Assets/App/Forms/U_Example/exampleFields.html'" > </div>
+        
+            <div class="row">
+                <div class="col-md-12">
+                    <br>
+                    <input type="button" class="btn btn-primary save-btn" value="Cancel" ng-click="cancel()"/>
+                    <input type="button" class="btn btn-primary save-btn" value="Save"   ng-click="save()" />
+                </div>
+            </div>
+        </div>
+    </ng-form>       
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+
+<script src="../../Assets/App/app.js"></script>
+<script src="../../Assets/App/services/spFormFactory.js?ver=5"></script>
+<script src="../../Assets/App/directives/commonDirectives.js?ver=5"></script>
+<script src="../../Assets/App/Forms/U_Example/exampleController.js?ver=5"></script>
+
+<!-- Load third party scripts required by the people picker -->
+<script src="/_layouts/15/SP.UI.Controls.js"></script>
+<script src="/_layouts/15/clienttemplates.js"></script>
+<script src="/_layouts/15/clientforms.js"></script>
+<script src="/_layouts/15/clientpeoplepicker.js"></script>
+<script src="/_layouts/15/autofill.js"></script>
+<script src="/_layouts/15/sp.RequestExecutor.js"></script>
+
+<!-- ****** The following script contains the people picker directive. ****** -->
+<script src="../../Assets/App/modules/peoplepicker/config/config.peoplepicker.js"></script>
+<script src="../../Assets/App/modules/peoplepicker/scripts/angular-sanitize.min.js"></script>
+<script src="../../Assets/App/modules/peoplepicker/scripts/angular-resource.min.js"></script>
+<script src="../../Assets/App/modules/peoplepicker/scripts/angular-route.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.1.3/ui-bootstrap-tpls.js"></script>
+
+<script src="../../Assets/App/modules/ng-currency.js"></script>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../Assets/App/styles/common.css?ver=5" rel="stylesheet" type="text/css"><html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:FSObjType msdt:dt="string">0</mso:FSObjType>
+<mso:Order msdt:dt="string">23400.0000000000</mso:Order>
+<mso:FileDirRef msdt:dt="string">sites/forms/Assets/App/Forms/U_Example</mso:FileDirRef>
+<mso:ContentTypeId msdt:dt="string">0x010100C7B3FC0CCF96504A85183C2C7358BB4B</mso:ContentTypeId>
+<mso:ContentType msdt:dt="string">Document</mso:ContentType>
+<mso:FileLeafRef msdt:dt="string">exampleForm.html</mso:FileLeafRef>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>

@@ -1,0 +1,98 @@
+<link href='https://fonts.googleapis.com/css?family=Arimo|Lobster' rel='stylesheet' type='text/css'>
+<link href="https://jolera365.sharepoint.com/teams/LCBO/delete/Shared%20Documents/Picker/Styles/bootstrap.css" rel="stylesheet" />
+<link href="https://jolera365.sharepoint.com/teams/LCBO/delete/Shared%20Documents/Picker/Styles/app.css" rel="stylesheet" />
+<!-- There's not much to the HTML file. A div that references my AngularJS controller -->
+<div id="ng-app" data-ng-app="app" data-ng-cloak>
+    <div id="strk" name="strk" data-ng-form="strk" data-ng-cloak>
+        <div class="container" id="sr-header" data-ng-controller="appCtrlr as vm" data-ng-cloak>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1 class="srTitle">SharePoint Client-side People Picker Control</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <span>
+                        Single User111:
+                    </span>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="sr-only" for="singlePeoplePicker"></label>
+                        <div data-ng-disabled="false" ui-people ng-model="vm.data.su" pp-is-multiuser="{{false}}" pp-width="220px" pp-account-type="User,DL,SecGroup,SPGroup" id="peoplePickerDivAT"></div>
+                    </div>
+ 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <span>
+                        Multiple User:
+                    </span>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="sr-only" for="multiPeoplePicker"></label>
+                        <div data-ng-disabled="{{false}}" ui-people ng-model="vm.data.mu" pp-is-multiuser="{{true}}" pp-width="220px" pp-account-type="User,DL,SecGroup,SPGroup" id="peoplePickerDivAP" pp-web-url="{{vm.webUrl}}"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:5px;">
+                <div class="col-sm-2">
+                    <span>
+                        Singe User Value:
+                    </span>
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                        <span data-ng-bind-html="vm.getPresence(vm.data.su.Name, vm.data.su.Title)"></span>&nbsp;
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <span>
+                        Multiple User Values:
+                    </span>
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                        <span data-ng-repeat="r in vm.data.mu.results track by $index">
+                            <span data-ng-bind-html="vm.getPresence(r.Name, r.Title)"></span>&nbsp;
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Load third party scripts required by the people picker -->
+<script type="text/ecmascript" src="/_layouts/15/SP.UI.Controls.js"></script>
+<script type="text/ecmascript" src="/_layouts/15/clienttemplates.js"></script>
+<script type="text/ecmascript" src="/_layouts/15/clientforms.js"></script>
+<script type="text/ecmascript" src="/_layouts/15/clientpeoplepicker.js"></script>
+<script type="text/ecmascript" src="/_layouts/15/autofill.js"></script>
+<script type="text/ecmascript" src="/_layouts/15/sp.RequestExecutor.js"></script>
+<!-- AngularJS-->
+<script type="text/ecmascript" src="https://jolera365.sharepoint.com/teams/LCBO/delete/Shared%20Documents/Picker/scripts/angular.min.js"></script>
+<script type="text/ecmascript" src="https://jolera365.sharepoint.com/teams/LCBO/delete/Shared%20Documents/Picker/scripts/angular-sanitize.min.js"></script>
+<script type="text/ecmascript" src="https://jolera365.sharepoint.com/teams/LCBO/delete/Shared%20Documents/Picker/scripts/angular-resource.min.js"></script>
+<script type="text/ecmascript" src="https://jolera365.sharepoint.com/teams/LCBO/delete/Shared%20Documents/Picker/scripts/angular-route.min.js"></script>
+<!-- All of this scripts are used to create the app. -->
+<script type="text/ecmascript" src="https://jolera365.sharepoint.com/teams/LCBO/delete/Shared%20Documents/Picker/app.js"></script>
+<!-- ****** The following script contains the people picker directive. ****** -->
+<script type="text/ecmascript" src="https://jolera365.sharepoint.com/teams/LCBO/delete/Shared%20Documents/Picker/config/config.peoplepicker.js"></script>
+<!-- ****** The following script contains the controller. ****** -->
+<script type="text/ecmascript" src="https://jolera365.sharepoint.com/teams/LCBO/delete/Shared%20Documents/Picker/controllers/controllers.js"></script><html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:FSObjType msdt:dt="string">0</mso:FSObjType>
+<mso:Order msdt:dt="string">1400.00000000000</mso:Order>
+<mso:FileDirRef msdt:dt="string">sites/forms/Assets/App/modules/peoplepicker</mso:FileDirRef>
+<mso:ContentTypeId msdt:dt="string">0x010100C7B3FC0CCF96504A85183C2C7358BB4B</mso:ContentTypeId>
+<mso:ContentType msdt:dt="string">Document</mso:ContentType>
+<mso:FileLeafRef msdt:dt="string">app.html</mso:FileLeafRef>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>

@@ -1,0 +1,41 @@
+﻿div#strk{
+	background-color:inherit;
+	font-family:Arimo;
+	color: brown;
+	font-size:14px;
+	line-height:18px!important;
+}
+
+div#sideNavBox {
+	display:none;
+}
+
+div#contentBox{
+	margin-left:0px;
+	margin-right:0px;	
+}
+
+div.ms-srch-sb{
+	background-color:#fff;
+}
+
+.srTitle{
+	font-family:Lobster !important;	
+	font-size: 48px;
+}
+
+
+/* People Picker Modifications */
+div#strk .sp-peoplepicker-autoFillContainer{
+	z-index: 20;
+	background-color:#fff;
+}
+div#strk .sp-peoplepicker-topLevel{
+	background-color:#fff;
+}
+div#strk .sp-peoplepicker-topLevel{
+	min-height:34px;
+}
+
+
+

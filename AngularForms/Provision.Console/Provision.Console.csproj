@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A29E0A3C-9E65-4899-8B61-400FBC1E4CB1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Provision.Console</RootNamespace>
+    <AssemblyName>Provision.Console</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Client.Policy, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.Office.Client.Policy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.TranslationServices, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.Office.Client.TranslationServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.SharePoint.Tools, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.Office.SharePoint.Tools.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Online.SharePoint.Client.Tenant, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.Online.SharePoint.Client.Tenant.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.SharePoint.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.DocumentManagement, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Publishing, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.SharePoint.Client.Search.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search.Applications, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.SharePoint.Client.Search.Applications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Taxonomy, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.UserProfiles, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.WorkflowServices, Version=16.1.3912.1204, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.3912.1204\lib\net45\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SPMeta2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+      <HintPath>..\packages\SPMeta2.Core.1.2.90\lib\net45\SPMeta2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SPMeta2.CSOM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d71faae3bf28531a, processorArchitecture=MSIL">
+      <HintPath>..\packages\SPMeta2.CSOM.Foundation.1.2.90\lib\net45\SPMeta2.CSOM.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extenstons\StringExtentions.cs" />
+    <Compile Include="Models\Absence.cs" />
+    <Compile Include="Models\Assets.cs" />
+    <Compile Include="Models\ExcelBasedListModel.cs" />
+    <Compile Include="Models\Rooms.cs" />
+    <Compile Include="Models\SecurityGroupsDefinition.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ContentTypeHelper.cs" />
+    <Compile Include="Utils\ContextHelper.cs" />
+    <Compile Include="Utils\FeaturesHelper.cs" />
+    <Compile Include="Utils\FileHelper.cs" />
+    <Compile Include="Utils\ListsHelper.cs" />
+    <Compile Include="Utils\PasswordHelper.cs" />
+    <Compile Include="Utils\SiteHelper.cs" />
+    <Compile Include="Utils\SPCleaner.cs" />
+    <Compile Include="Utils\WebPartsHelper.cs" />
+    <Compile Include="Utils\xField.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="App\modules\peoplepicker\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="App\modules\peoplepicker\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="App\modules\peoplepicker\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="App\modules\peoplepicker\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="App\modules\peoplepicker\scripts\angular-resource.min.js.map" />
+    <None Include="App\modules\peoplepicker\scripts\angular-route.min.js.map" />
+    <None Include="App\modules\peoplepicker\scripts\angular-sanitize.min.js.map" />
+    <None Include="App\modules\peoplepicker\scripts\angular.min.js.map" />
+    <None Include="Models\Travel.csv" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App\app.js" />
+    <Content Include="App\directives\choiceField.html" />
+    <Content Include="App\directives\commonDirectives.js" />
+    <Content Include="App\directives\datetimePicker.html" />
+    <Content Include="App\directives\fileUploader.html" />
+    <Content Include="App\directives\radioField.html" />
+    <Content Include="App\Forms\Absence\absenceController.js" />
+    <Content Include="App\Forms\Absence\absenceFields.html" />
+    <Content Include="App\Forms\Absence\absenceForm.html" />
+    <Content Include="App\Forms\ReservationsCalendar\reservationsController.js" />
+    <Content Include="App\Forms\ReservationsCalendar\reservationsFields.html" />
+    <Content Include="App\Forms\ReservationsCalendar\reservationsForm.html" />
+    <Content Include="App\Forms\Reservations\reservationsController.js" />
+    <Content Include="App\Forms\Reservations\reservationsFields.html" />
+    <Content Include="App\Forms\Reservations\reservationsForm.html" />
+    <Content Include="App\Forms\Travel\travelController.js" />
+    <Content Include="App\Forms\Travel\travelFields.html" />
+    <Content Include="App\Forms\Travel\travelForm.html" />
+    <Content Include="App\Forms\U_Example\exampleController.js" />
+    <Content Include="App\Forms\U_Example\exampleFields.html" />
+    <Content Include="App\Forms\U_Example\exampleForm.html" />
+    <Content Include="App\modules\ng-currency.js" />
+    <Content Include="App\modules\peoplepicker\app.html" />
+    <Content Include="App\modules\peoplepicker\app.js" />
+    <Content Include="App\modules\peoplepicker\config\config.peoplepicker.js" />
+    <Content Include="App\modules\peoplepicker\controllers\controllers.js" />
+    <Content Include="App\modules\peoplepicker\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="App\modules\peoplepicker\scripts\angular-resource.min.js" />
+    <Content Include="App\modules\peoplepicker\scripts\angular-route.min.js" />
+    <Content Include="App\modules\peoplepicker\scripts\angular-sanitize.min.js" />
+    <Content Include="App\modules\peoplepicker\scripts\angular.min.js" />
+    <Content Include="App\modules\peoplepicker\styles\app.css" />
+    <Content Include="App\modules\peoplepicker\styles\bootstrap.css" />
+    <Content Include="App\services\spFormFactory.js" />
+    <Content Include="App\styles\common.css" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rem xcopy /s /d /y /i "$(ProjectDir)App" "$(TargetDir)App"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,73 @@
+<div id="{{controlId}}" class="fileUploader">
+    <div ng-show="fileReaderUnsupported">
+        FileReader API not supported - file uploading will not work.  Please upgrade your browser.
+    </div>
+
+    <ng-form name="uploadForm">
+        <div ng-if="!disable && !fileReaderUnsupported" class="clearfix">
+            <div class="clearfix">
+                <div class="pull-left">Select file:</div>
+                <br>
+                <div class="pull-left">
+                    <!--required="require" ng-required="require"-->
+                    <input type="file" class="form-control fileUploadControl" required="true" on-file-changed="updateDisplayName()" />
+                </div>
+            </div>
+
+            <div class="clearfix" ng-if="model.showDisplayNameField">
+                <span>Name:</span>
+                <div class="pull-right">
+                    <input type="text" class="form-control" required="true" ng-model="model.attachmentDisplayName" placeholder="Enter file display name" />
+                </div>
+            </div>
+
+            <div class="clearfix pull-left padding-top-10" ng-show="model.showDisplayNameField">
+                <input type="button" class="btn btn-primary glow-effect" value="Add" ng-click="model.addAttachmentPending()" ng-disabled="uploadForm.$invalid || !model.isFileSelected()"/>
+            </div>
+        </div>
+    </ng-form>
+    <div ng-if="model.attachmentList.length > 0" class="clearfix">
+        <h5>Existing Attachments</h5>
+        <ul class="list-group">
+            <li class="list-group-item attachmentItem" ng-repeat="attachment in model.attachmentList" 
+                ng-class="{pendingChange: model.isAttachmentPendingChange(attachment), pendingAddition: !model.isServerAttachment(attachment), pendingDeletion: model.isServerAttachment(attachment)}">
+
+                <div class="clearfix">
+                    <div>
+                        <span ng-if="!model.isServerAttachment(attachment) && model.isAttachmentPendingChange(attachment)" class="glyphicon glyphicon-plus" title="Addition Pending"> </span>
+                        <span ng-if="model.isServerAttachment(attachment) && model.isAttachmentPendingChange(attachment)" class="glyphicon glyphicon-minus" title="Deletion Pending"> </span>
+                        
+                        <span ng-if="model.isServerAttachment(attachment)"><a href="{{attachment.File.ServerRelativeUrl}}" target="_blank">{{attachment.File.Title}}</a></span>
+                        <span ng-if="!model.isServerAttachment(attachment)">{{attachment.File.Title}}</span>
+                        <div class="pull-right" ng-if='disable != true'>
+                            <button type="button" class="close" aria-label="Delete Attachment" title="Delete Attachment" ng-click="model.deleteAttachment(attachment)"
+                                ng-show="model.isServerAttachment(attachment) && !model.isAttachmentPendingChange(attachment)">
+                            
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                            <span class="glyphicon glyphicon-ban-circle" aria-label="Cancel Change" title="{{'Cancel ' + (model.isServerAttachment(attachment) ? 'Pending Deletion' : 'Pending Addition')}}" 
+                                ng-show="model.isAttachmentPendingChange(attachment)" 
+                                ng-click="model.cancelPendingAttachmentChange(attachment)">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:FSObjType msdt:dt="string">0</mso:FSObjType>
+<mso:Order msdt:dt="string">22900.0000000000</mso:Order>
+<mso:FileDirRef msdt:dt="string">sites/forms/Assets/App/directives</mso:FileDirRef>
+<mso:ContentTypeId msdt:dt="string">0x010100C7B3FC0CCF96504A85183C2C7358BB4B</mso:ContentTypeId>
+<mso:ContentType msdt:dt="string">Document</mso:ContentType>
+<mso:FileLeafRef msdt:dt="string">fileUploader.html</mso:FileLeafRef>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>

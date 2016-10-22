@@ -1,0 +1,20 @@
+<span ng-repeat="option in field.Choices">
+    <span class='radio-label'>{{option}}</span>
+    <input class='radio-value' name="{{field.FieldInternalName}}" 
+        type="radio" 
+        ng-value="field.Choices[$index]" 
+        ng-model="field.Value" 
+        ng-disabled="disable" 
+        ng-required="require" />
+</span><html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:FSObjType msdt:dt="string">0</mso:FSObjType>
+<mso:Order msdt:dt="string">1100.00000000000</mso:Order>
+<mso:FileDirRef msdt:dt="string">sites/forms/Assets/App/directives</mso:FileDirRef>
+<mso:ContentTypeId msdt:dt="string">0x010100C7B3FC0CCF96504A85183C2C7358BB4B</mso:ContentTypeId>
+<mso:ContentType msdt:dt="string">Document</mso:ContentType>
+<mso:FileLeafRef msdt:dt="string">radioField.html</mso:FileLeafRef>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
