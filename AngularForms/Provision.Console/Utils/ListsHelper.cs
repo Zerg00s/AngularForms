@@ -23,9 +23,8 @@ namespace Provision.Console.Utils
 						}
 				  }
 
-		private static void GenerateListCsv(ClientContext clientContext, string listUrl, string fileName)
+		public static void GenerateListCsv(ClientContext clientContext, List oList, string fileName)
 				{
-					List oList = clientContext.Web.GetList(listUrl);
 					FieldCollection fieldColl = oList.Fields;
 					clientContext.Load(fieldColl);
 					clientContext.ExecuteQuery();
@@ -90,7 +89,7 @@ namespace Provision.Console.Utils
 						}
 					}
 
-					System.IO.File.WriteAllText(fileName, lines.ToString());
+					System.IO.File.WriteAllText(@"Models\" + fileName, lines.ToString());
 				}
 	}
 }

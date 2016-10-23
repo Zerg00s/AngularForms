@@ -23,15 +23,15 @@ namespace Provision.Console.Utils
 		public bool Required { get; set; }
 		private string AngularStringTemplate = "<div class='col-md-4'><!--{0} | Type: {1} --><h4>{{{{f.{2}.FieldDisplayName}}}}</h4>{3}</div>";
 
-		private string AngularTextField = "<input type='text' id='{0}' ng-model='f.{0}.Value' class='full-width' />";
-		private string AngularNoteField = "<textarea ng-model='f.{0}.Value'></textarea>";
-		private string AngularNumberField = "<input type='number' ng-model='f.{0}.Value' min='0' id='{0}' />";
-		private string AngularTimeField = "<input type='time' ng-model='f.{0}.Value' id='{0}' />";
-		private string AngularDateTimeField = "<datetime-picker format='calendarFormat' model='f.{0}.Value' />";
-		private string AngularChoiceField = "<choice-field field='f.{0}' id='{0}' id='{0}' class='choice-field'> </choice-field>";
-		private string AngularRadioField = "<radio-field field='f.{0}' id='{0}' id='{0}'> </choice-field>";
-		private string AngularUserField = "<div ng-model='f.{0}.user' id='{0}' ui-people pp-is-multiuser='{{false}}' pp-width='220px' pp-account-type='User,DL,SecGroup,SPGroup'> </div>";
-		private string AngularBooleanField = "<input type='checkbox' ng-model='f.{0}.Value' id='{0}' />";
+		private string AngularTextField = "<input type='text' id='{0}' name='{0}' ng-model='f.{0}.Value' class='full-width' />";
+		private string AngularNoteField = "<textarea name='{0}' ng-model='f.{0}.Value'></textarea>";
+		private string AngularNumberField = "<input name='{0}' type='number' ng-model='f.{0}.Value' min='0' id='{0}' />";
+		private string AngularTimeField = "<input name='{0}' type='time' ng-model='f.{0}.Value' id='{0}' />";
+		private string AngularDateTimeField = "<datetime-picker name='{0}' format='calendarFormat' ng-model='f.{0}.Value' />";
+		private string AngularChoiceField = "<choice-field name='{0}' field='f.{0}' id='{0}' id='{0}' class='choice-field'> </choice-field>";
+		private string AngularRadioField = "<radio-field name='{0}' field='f.{0}' id='{0}' id='{0}'> </choice-field>";
+		private string AngularUserField = "<div name='{0}' ng-model='f.{0}.user' id='{0}' ui-people pp-is-multiuser='{{false}}' pp-width='220px' pp-account-type='User,DL,SecGroup,SPGroup'> </div>";
+		private string AngularBooleanField = "<input name='{0}' type='checkbox' ng-model='f.{0}.Value' id='{0}' />";
 
 		public string AngularView { get; set; }
 

@@ -127,9 +127,13 @@ namespace Provision.Console.Utils
 
 		public static void AddCEWPToList(ClientContext clientContext, List list)
 		{
-			string htmlLink = new Uri(clientContext.Web.Url).AbsolutePath + "/" + Program.AssetsLibraryInternalname;
+			string htmlLink = new Uri(clientContext.Web.Url).AbsolutePath +
+				"/" + Program.AssetsLibraryInternalname +
+				"/App/Forms/" + list.RootFolder.Name + "//" + list.RootFolder.Name + "Form.html" ;
 
-			AddCEWP(clientContext, list.DefaultDisplayFormUrl, "CEWP", "Main", htmlLink, false);
+			AddCEWP(clientContext, list.DefaultDisplayFormUrl, "CEWP", "Main", htmlLink, true);
+			AddCEWP(clientContext, list.DefaultEditFormUrl, "CEWP", "Main", htmlLink, true);
+			AddCEWP(clientContext, list.DefaultNewFormUrl, "CEWP", "Main", htmlLink, true);
 		}
 	}
 }

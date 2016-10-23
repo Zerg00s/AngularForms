@@ -104,13 +104,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extenstons\StringExtentions.cs" />
-    <Compile Include="Models\Absence.cs" />
     <Compile Include="Models\Assets.cs" />
     <Compile Include="Models\ExcelBasedListModel.cs" />
-    <Compile Include="Models\Rooms.cs" />
-    <Compile Include="Models\SecurityGroupsDefinition.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\AngularHelper.cs" />
     <Compile Include="Utils\ContentTypeHelper.cs" />
     <Compile Include="Utils\ContextHelper.cs" />
     <Compile Include="Utils\FeaturesHelper.cs" />
@@ -132,9 +130,6 @@
     <None Include="App\modules\peoplepicker\scripts\angular-route.min.js.map" />
     <None Include="App\modules\peoplepicker\scripts\angular-sanitize.min.js.map" />
     <None Include="App\modules\peoplepicker\scripts\angular.min.js.map" />
-    <None Include="Models\Travel.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -144,21 +139,9 @@
     <Content Include="App\directives\datetimePicker.html" />
     <Content Include="App\directives\fileUploader.html" />
     <Content Include="App\directives\radioField.html" />
-    <Content Include="App\Forms\Absence\absenceController.js" />
-    <Content Include="App\Forms\Absence\absenceFields.html" />
-    <Content Include="App\Forms\Absence\absenceForm.html" />
-    <Content Include="App\Forms\ReservationsCalendar\reservationsController.js" />
-    <Content Include="App\Forms\ReservationsCalendar\reservationsFields.html" />
-    <Content Include="App\Forms\ReservationsCalendar\reservationsForm.html" />
-    <Content Include="App\Forms\Reservations\reservationsController.js" />
-    <Content Include="App\Forms\Reservations\reservationsFields.html" />
-    <Content Include="App\Forms\Reservations\reservationsForm.html" />
-    <Content Include="App\Forms\Travel\travelController.js" />
-    <Content Include="App\Forms\Travel\travelFields.html" />
-    <Content Include="App\Forms\Travel\travelForm.html" />
-    <Content Include="App\Forms\U_Example\exampleController.js" />
-    <Content Include="App\Forms\U_Example\exampleFields.html" />
-    <Content Include="App\Forms\U_Example\exampleForm.html" />
+    <Content Include="App\Forms\SampleForm\sampleController.js" />
+    <Content Include="App\Forms\SampleForm\sampleFields.html" />
+    <Content Include="App\Forms\SampleForm\sampleForm.html" />
     <Content Include="App\modules\ng-currency.js" />
     <Content Include="App\modules\peoplepicker\app.html" />
     <Content Include="App\modules\peoplepicker\app.js" />

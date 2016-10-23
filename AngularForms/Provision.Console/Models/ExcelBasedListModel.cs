@@ -29,6 +29,7 @@ namespace Provision.Console.Models
 		public string ListUrl { get; set; }
 		public string Group { get; set; }
 		public string CsvFilePath { get; set; }
+		public string ListInternalName{ get; set; }
 
 
 		public ExcelBasedListModel(string csvFilePath, string listDisplayName, string listUrl, Guid contentTypeId, string contentTypeName, string group)
@@ -104,7 +105,10 @@ namespace Provision.Console.Models
 
 		public string GenerateAngularView()
 		{
-			
+			string templateFolder = @"App\Forms\SampleForm";
+			string destinationFolder = string.Format("App\\Forms\\{0}", ListInternalName);
+			System.IO.Directory.CreateDirectory(destinationFolder);
+			var k = FieldDefnitions;
 			StringBuilder builder = new StringBuilder();
 
 			foreach (xField field in xFields)
@@ -112,8 +116,24 @@ namespace Provision.Console.Models
             builder.Append(field.AngularView);
          }
 
-			System.IO.File.Delete(this.ListName + "AngularView.html");
-			System.IO.File.WriteAllText(this.ListName + "AngularView.html", builder.ToString());
+			System.IO.File.Delete(string.Format("App\\Forms\\{0}\\{0}Fields.html", ListInternalName));
+			
+         System.IO.File.WriteAllText(string.Format("App\\Forms\\{0}\\{0}Fields.html", ListInternalName), builder.ToString());
+
+			string destinationControlerFile = destinationFolder + "\\" + ListInternalName + "Controller.js";
+			string destinationViewFile = destinationFolder + "\\" + ListInternalName + "Form.html";
+			System.IO.File.Delete(destinationControlerFile);
+			System.IO.File.Delete(destinationViewFile);
+         System.IO.File.Copy(templateFolder + @"\sampleController.js", destinationControlerFile);
+			System.IO.File.Copy(templateFolder + @"\sampleForm.html", destinationViewFile);
+
+			string controlerText = System.IO.File.ReadAllText(destinationControlerFile);
+			controlerText = controlerText.Replace("LIST_TITLE", ListName);
+			System.IO.File.WriteAllText(destinationControlerFile, controlerText);
+
+			string viewText = System.IO.File.ReadAllText(destinationViewFile);
+			viewText = viewText.Replace("LIST_NAME", ListInternalName);
+			System.IO.File.WriteAllText(destinationViewFile, viewText);
 
 			return builder.ToString();
       }
