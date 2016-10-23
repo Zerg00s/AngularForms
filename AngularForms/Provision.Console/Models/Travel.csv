@@ -61,4 +61,4 @@ OtherDate	Text		Other Date	OtherDate	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	796
 OtherAmount	Text		Other Amount	OtherAmount	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5052	
 OtherAdviceNum	Text		Other Advice No	OtherAdviceNum	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5053	
 CloseProcess	Boolean		Close Process	CloseProcess	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5054	
-TravelStatus	Choice		Travel Status	TravelStatus	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	CHANGE_GUOID!!79658c1e-3096-5544-2235-4335501a5055	Approved#Disapproved
+TravelStatus	Choice		Travel Status	TravelStatus	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5055	Approved#Disapproved

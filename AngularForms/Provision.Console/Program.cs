@@ -25,13 +25,11 @@ namespace Provision.Console
 		static void Main(string[] args)
 		{
 			ClientContext clientContext = null;
-			clientContext = ContextHelper.GetClientContext("http://contoso/forms/conf4/", @"user@domain");
+			clientContext = ContextHelper.GetClientContext("https://qpickit.sharepoint.com/sites/developer", @"ivan@qpickit.com");
 
 			//ProvisionSharePointArtifacts(clientContext);
-			FileHelper.UploadFoldersRecursively(clientContext, SourceFolder, AppDestinationLibraryTitle);
-			//WebPartsHelper.AddWebPart(clientContext);
-			//WebPartsHelper.FooWebPart(clientContext, @"/teams/LCBO/delete/SitePages/Home.aspx", "Remotely Provisioned", "Header", @"/teams/LCBO/delete/Assets/App/provisioned.html", false);
-			//AddWebParts(clientContext.Web.Url, clientContext);
+			//FileHelper.UploadFoldersRecursively(clientContext, SourceFolder, AppDestinationLibraryTitle);
+			AddWebParts(clientContext.Web.Url, clientContext);
 			//FileHelper.DownloadLibrary(clientContext, "Assets", @"C:\temp\results\subfolder\");
 			System.Console.WriteLine("PRESS ANY KEY TO EXIT");
 			System.Console.ReadKey(true);
@@ -42,9 +40,9 @@ namespace Provision.Console
 			var webModel = SPMeta2Model.NewWebModel();
 			webModel.AddList(Assets.listDefinition);
 
-			//ExcelBasedListModel travelModel = new ExcelBasedListModel(@"Models\Travel.csv", "Travel Requests", "Travel", new Guid("79658c1e-3096-5544-5535-4335501a5b91"), "Travel Requests", "Senate");
-			//travelModel.InjectModelsToDefinition(webDefinition);
-			//travelModel.GenerateAngularView();
+			ExcelBasedListModel travelModel = new ExcelBasedListModel(@"Models\Travel.csv", "Travel Requests", "Travel", new Guid("79658c1e-3096-5544-5535-4335501a5b91"), "Travel Requests", "Senate");
+		    travelModel.InjectModelsToDefinition(webModel);
+			travelModel.GenerateAngularView();
 			
 			//ListHelper.GenerateListCsv(clientContext, "/teams/LCBO/LeaveRequest/LeaveofAbsence/", "Absence.csv");
 			

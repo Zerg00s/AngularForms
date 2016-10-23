@@ -132,7 +132,9 @@
     <None Include="App\modules\peoplepicker\scripts\angular-route.min.js.map" />
     <None Include="App\modules\peoplepicker\scripts\angular-sanitize.min.js.map" />
     <None Include="App\modules\peoplepicker\scripts\angular.min.js.map" />
-    <None Include="Models\Travel.csv" />
+    <None Include="Models\Travel.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -174,7 +176,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rem xcopy /s /d /y /i "$(ProjectDir)App" "$(TargetDir)App"</PostBuildEvent>
+    <PostBuildEvent>xcopy /s /d /y /i "$(ProjectDir)App" "$(TargetDir)App"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
