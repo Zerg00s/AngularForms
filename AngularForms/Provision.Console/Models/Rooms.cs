@@ -65,7 +65,7 @@ namespace Provision.Console.Models
 				InternalName = "OfficeRoom",
 				Id = new Guid("03445b67-01f5-4887-9e3e-2702dfb8c318"),
 				FieldType = BuiltInFieldTypes.Text,
-				Group = "Senate",
+				Group = "Angular",
 				//Required = true
 			};
 
@@ -75,7 +75,7 @@ namespace Provision.Console.Models
 				InternalName = "DateRequested",
 				Id = new Guid("07744367-01f5-47d7-9e3e-2712dfb8c318"),
 				//DisplayFormat = BuiltInDateTimeFieldFormatType.DateOnly,
-				Group = "Senate",
+				Group = "Angular",
 				
 			};
 
@@ -86,7 +86,7 @@ namespace Provision.Console.Models
 				Id = new Guid("07777b67-0445-3337-9e3e-2712dfb8c318"),
 				FieldType = BuiltInFieldTypes.Text,
 				//Required = true
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static FieldDefinition PhoneNumber = new FieldDefinition
@@ -95,7 +95,7 @@ namespace Provision.Console.Models
 				InternalName = "PhoneNumber",
 				Id = new Guid("07777767-01f5-47d7-9e3e-27144fb33318"),
 				FieldType = BuiltInFieldTypes.Text,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static DateTimeFieldDefinition DateOfUse = new DateTimeFieldDefinition
@@ -104,7 +104,7 @@ namespace Provision.Console.Models
 				InternalName = "DateOfUse",
 				Id = new Guid("33774477-01f5-47d7-9e3e-2712dfb8c318"),
 				//DisplayFormat = BuiltInDateTimeFieldFormatType.DateOnly,
-				Group = "Senate",
+				Group = "Angular",
 
 			};
 
@@ -114,7 +114,7 @@ namespace Provision.Console.Models
 				InternalName = "StartTime",
 				Id = new Guid("06445557-33f5-47d7-9e2e-2702dfb8c218"),
 				//DisplayFormat = BuiltInDateTimeFieldFormatType.DateTime,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static DateTimeFieldDefinition EndTime = new DateTimeFieldDefinition
@@ -123,7 +123,7 @@ namespace Provision.Console.Models
 				InternalName = "EndTime",
 				Id = new Guid("06975557-33f5-47d7-3344-2744dfb8c218"),
 				//DisplayFormat = BuiltInDateTimeFieldFormatType.DateTime,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static ChoiceFieldDefinition UseOfRoomOrChamber = new ChoiceFieldDefinition
@@ -143,7 +143,7 @@ namespace Provision.Console.Models
 				  "Minority Caucus Room (requires Minority Caucus leader's approval)"
 				},
 			 
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static FieldDefinition NumberOfAttendees = new FieldDefinition
@@ -152,7 +152,7 @@ namespace Provision.Console.Models
 				InternalName = "NumberOfAttendees",
 				Id = new Guid("01175b67-0115-47d7-9e2e-2733dfb8c448"),
 				FieldType = BuiltInFieldTypes.Number,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static DateTimeFieldDefinition AcFrom = new DateTimeFieldDefinition
@@ -161,7 +161,7 @@ namespace Provision.Console.Models
 				InternalName = "AcFrom",
 				Id = new Guid("01973447-01f5-47d7-9e2e-2702dfb8c218"),
 				//DisplayFormat = BuiltInDateTimeFieldFormatType.DateTime,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static DateTimeFieldDefinition AcTo = new DateTimeFieldDefinition
@@ -170,7 +170,7 @@ namespace Provision.Console.Models
 				InternalName = "AcTo",
 				Id = new Guid("01374437-01f5-47d7-9e2e-2702dfb8c218"),
 				//DisplayFormat = BuiltInDateTimeFieldFormatType.DateTime,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static FieldDefinition OptionalApproverRoom = new FieldDefinition
@@ -179,7 +179,7 @@ namespace Provision.Console.Models
 				InternalName = "OptionalApproverRoom",
 				Id = new Guid("03366667-01f5-47d7-9e2e-27044f44c218"),
 				FieldType = BuiltInFieldTypes.User,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static FieldDefinition Purpose = new FieldDefinition
@@ -188,7 +188,7 @@ namespace Provision.Console.Models
 				InternalName = "PurposeRoom",
 				Id = new Guid("01374437-01f5-47d7-9e2e-2702dfb8c218"),
 				FieldType = BuiltInFieldTypes.Note,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static DateTimeFieldDefinition ApproverDate = new DateTimeFieldDefinition
@@ -197,7 +197,7 @@ namespace Provision.Console.Models
 				InternalName = "ApproverDate",
 				Id = new Guid("06675b67-01f5-47d7-9e2e-27033fb8c218"),
 				//DisplayFormat = BuiltInDateTimeFieldFormatType.DateOnly,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static ChoiceFieldDefinition OptionalApproval = new ChoiceFieldDefinition
@@ -208,7 +208,7 @@ namespace Provision.Console.Models
 				Choices = new System.Collections.ObjectModel.Collection<string>() { "Approved", "Declined" },
 				EditFormat = "RadioButtons",
 				DefaultValue = "",
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static FieldDefinition OptionalApproverComments = new FieldDefinition
@@ -217,7 +217,7 @@ namespace Provision.Console.Models
 				InternalName = "OptionalApproverComments",
 				Id = new Guid("06666b67-33f5-47d7-9e2e-2702dfb8c218"),
 				FieldType = BuiltInFieldTypes.Note,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static FieldDefinition OptionalRoomApprover = new FieldDefinition
@@ -226,7 +226,7 @@ namespace Provision.Console.Models
 				InternalName = "OptionalRoomApprover",
 				Id = new Guid("03366667-01f5-47d7-9e2e-2702dfb8c218"),
 				FieldType = BuiltInFieldTypes.Text,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static DateTimeFieldDefinition OptionalApproverDate = new DateTimeFieldDefinition
@@ -235,7 +235,7 @@ namespace Provision.Console.Models
 				InternalName = "OptionalApproverDate",
 				Id = new Guid("06675b67-01f5-47d7-9e2e-33033338c218"),
 				//DisplayFormat = BuiltInDateTimeFieldFormatType.DateOnly,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 
@@ -247,7 +247,7 @@ namespace Provision.Console.Models
 				Choices = new System.Collections.ObjectModel.Collection<string>() { "Approved", "Declined" },
 				EditFormat = "RadioButtons",
 				DefaultValue = "",
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static FieldDefinition RoomApproverComments = new FieldDefinition
@@ -256,7 +256,7 @@ namespace Provision.Console.Models
 				InternalName = "RoomApproverComments",
 				Id = new Guid("06665567-33f5-47d7-9e2e-2702dfb8c218"),
  				FieldType = BuiltInFieldTypes.Note,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static FieldDefinition RoomApprover = new FieldDefinition
@@ -265,7 +265,7 @@ namespace Provision.Console.Models
 				InternalName = "RoomApprover",
 				Id = new Guid("03366655-01f5-47d7-9e2e-2702dfb8c218"),
 				FieldType = BuiltInFieldTypes.Text,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			public static DateTimeFieldDefinition RoomApproverDate = new DateTimeFieldDefinition
@@ -274,7 +274,7 @@ namespace Provision.Console.Models
 				InternalName = "RoomApproverDate",
 				Id = new Guid("06675567-01f5-47d7-9e2e-33033338c218"),
 				//DisplayFormat = BuiltInDateTimeFieldFormatType.DateOnly,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 			//--------------------
@@ -286,7 +286,7 @@ namespace Provision.Console.Models
 				Choices = new System.Collections.ObjectModel.Collection<string>() { "Approved", "Declined" },
 				EditFormat = "RadioButtons",
 				DefaultValue = "",
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 
@@ -298,7 +298,7 @@ namespace Provision.Console.Models
 				InternalName = "WFStatus",
 				Id = new Guid("04465b67-33f5-47d7-9323-2702dfb8c218"),
 				FieldType = BuiltInFieldTypes.Text,
-				Group = "Senate",
+				Group = "Angular",
 			};
 
 		}
@@ -310,7 +310,7 @@ namespace Provision.Console.Models
 				Name = ConferenceRoomRequests,
 				Id = new Guid("79658c1e-3096-4c44-b335-4338d01a5b93"),
 				ParentContentTypeId = BuiltInContentTypeId.Item,
-				Group = "Senate"
+				Group = "Angular"
 			};
 		}
 

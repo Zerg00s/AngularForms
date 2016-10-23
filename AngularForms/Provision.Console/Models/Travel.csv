@@ -1,64 +1,64 @@
 Name	Type	Description	DisplayName	StaticName	Group	Hidden	Required	Sealed	ShowInDisplayForm	ShowInEditForm	ShowInNewForm	Guid	Choices
-Traveler	User		Traveler	Traveler	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b91	
-DepDate	DateTime		Departure Date	DepDate	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b92	
-RetrnDate	DateTime		Return Date	RetrnDate	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b93	
-PtDepature	Text		Point of Departure	PtDepature	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b94	
-TraDestination	Text		Travel Destination	TraDestination	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b95	
-TypeTravel	Choice		Type of Travel	TypeTravel	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b96	Home Island#Other
-NumTrips	Choice		Number of Trips	NumTrips	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b97	Allocated#Additional
-PurposeTravel	Choice		Purpose of Travel	PurposeTravel	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b98	Conference#Meeting#Other
-TypeTravelNmEvent	Text		Type of Travel Name of Event	TypeTravelNmEvent	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5001	
-TypeTravelSponOrg	Text		Type of Travel Sponsoring Organization	TypeTravelSponOrg	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5002	
-TypeTravelPos	Text		Type of Travel Position Held	TypeTravelPos	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5003	
-TypeTravelDesc	Text		Type of Travel Description	TypeTravelDesc	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5004	
-EstAirFare	Text		Estimates Airfare	EstAirFare	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5005	
-EstHotelLod	Text		Estimates Hotel/Lodging	EstHotelLod	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5006	
-EstMeals	Text		Estimates Meals	EstMeals	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5007	
-EstRegFee	Text		Estimates Registration Fee	EstRegFee	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5008	
-EstGrndTrans	Text		Estimates Ground transportation	EstGrndTrans	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5009	
-EstOtherVal	Text		Estimates Other Value	EstOtherVal	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5010	
-EstOtherExp	Text		Estimates Other Explanation	EstOtherExp	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5011	
-NumTripEvent	Text		Number of Trips Name of Event	NumTripEvent	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5012	
-NumTripSponOrg	Text		Number of Trips Sponsoring Organization	NumTripSponOrg	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5013	
-NumTripPos	Text		Number of Trips Position Held	NumTripPos	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5014	
-NumTripDesc	Text		Number of Trips Description	NumTripDesc	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5015	
-NumTripNumDays	Text		Number of Trips Number of Days	NumTripNumDays	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5016	
-SenPresApproval	Choice		Senate President Approval	SenPresApproval	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5017	Approved#Disapproved
-SenPresName	User		Senate President Name	SenPresName	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5018	
-SenPresDate	DateTime		Senate President Date	SenPresDate	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5019	
-ReimAirFare	Text		Reimbursement Airfare	ReimAirFare	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5020	
-ReimAirHotelLod	Text		Reimbursement Hotel/Lodging	ReimAirHotelLod	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5021	
-ReimAirMeals	Text		Reimbursement Meals	ReimAirMeals	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5022	
-ReimAirRegFee	Text		Reimbursement Registration Fee	ReimAirRegFee	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5023	
-ReimAirGrndTrans	Text		Reimbursement Ground transportation	ReimAirGrndTrans	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5024	
-ReimAirOtherVal	Text		Reimbursement Other Value	ReimAirOtherVal	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5025	
-ReimAirOtherExp	Text		Reimbursement Other Explanation	ReimAirOtherExp	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5026	
-ClerkApproval	Choice		Clerk Approval	ClerkApproval	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5027	Approved#Disapproved
-ClerkName	User		Clerk Name	ClerkName	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5028	
-ClerkDate	DateTime		Clerk Date	ClerkDate	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5029	
-Payment	Text		Payment	Payment	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5030	
-Allowance	Text		Allowance	Allowance	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5031	
-ConfirmationNum	Text		Confirmation No(s)	ConfirmationNum	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5032	
-Airline	Text		Airline	Airline	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5033	
-PONum	Text		P.O. No.	PONum	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5034	
-IssuedTo	Text		Issued to	IssuedTo	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5035	
-AirFareDate	Text		Airfare Date	AirFareDate	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5036	
-AirFareAmount	Text		Airfare Amount	AirFareAmount	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5037	
-AirFareAdviceNum	Text		Airfare Advice No	AirFareAdviceNum	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5038	
-HotelLodDate	Text		Hotel lodging Date	HotelLodDate	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5039	
-HotelLodAmount	Text		Hotel lodging Amount	HotelLodAmount	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5040	
-HotelLodAdviceNum	Text		Hotel lodging Advice No	HotelLodAdviceNum	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5041	
-MealsDate	Text		Meals Date	MealsDate	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5042	
-MealsAmount	Text		Meals Amount	MealsAmount	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5043	
-MealsAdviceNum	Text		Meals Advice No	MealsAdviceNum	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5044	
-RegisFeeDate	Text		Registration Fee Date	RegisFeeDate	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5045	
-RegisFeeAmount	Text		Registration Fee Amount	RegisFeeAmount	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5046	
-RegisFeeAdviceNum	Text		Registration Fee Advice No	RegisFeeAdviceNum	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5047	
-GroundTransDate	Text		Ground Transportation Date	GroundTransDate	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5048	
-GroundTransAmount	Text		Ground Transportation Amount	GroundTransAmount	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5049	
-GroundTransAdviceNum	Text		Ground Transportation Advice No	GroundTransAdviceNum	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5050	
-OtherDate	Text		Other Date	OtherDate	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5051	
-OtherAmount	Text		Other Amount	OtherAmount	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5052	
-OtherAdviceNum	Text		Other Advice No	OtherAdviceNum	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5053	
-CloseProcess	Boolean		Close Process	CloseProcess	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5054	
-TravelStatus	Choice		Travel Status	TravelStatus	Senate	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	CHANGE_GUOID!!79658c1e-3096-5544-2235-4335501a5055	Approved#Disapproved
+Traveler	User		Traveler	Traveler	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b91	
+DepDate	DateTime		Departure Date	DepDate	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b92	
+RetrnDate	DateTime		Return Date	RetrnDate	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b93	
+PtDepature	Text		Point of Departure	PtDepature	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b94	
+TraDestination	Text		Travel Destination	TraDestination	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b95	
+TypeTravel	Choice		Type of Travel	TypeTravel	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b96	Home Island#Other
+NumTrips	Choice		Number of Trips	NumTrips	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b97	Allocated#Additional
+PurposeTravel	Choice		Purpose of Travel	PurposeTravel	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-5535-4335501a5b98	Conference#Meeting#Other
+TypeTravelNmEvent	Text		Type of Travel Name of Event	TypeTravelNmEvent	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5001	
+TypeTravelSponOrg	Text		Type of Travel Sponsoring Organization	TypeTravelSponOrg	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5002	
+TypeTravelPos	Text		Type of Travel Position Held	TypeTravelPos	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5003	
+TypeTravelDesc	Text		Type of Travel Description	TypeTravelDesc	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5004	
+EstAirFare	Text		Estimates Airfare	EstAirFare	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5005	
+EstHotelLod	Text		Estimates Hotel/Lodging	EstHotelLod	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5006	
+EstMeals	Text		Estimates Meals	EstMeals	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5007	
+EstRegFee	Text		Estimates Registration Fee	EstRegFee	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5008	
+EstGrndTrans	Text		Estimates Ground transportation	EstGrndTrans	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5009	
+EstOtherVal	Text		Estimates Other Value	EstOtherVal	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5010	
+EstOtherExp	Text		Estimates Other Explanation	EstOtherExp	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5011	
+NumTripEvent	Text		Number of Trips Name of Event	NumTripEvent	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5012	
+NumTripSponOrg	Text		Number of Trips Sponsoring Organization	NumTripSponOrg	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5013	
+NumTripPos	Text		Number of Trips Position Held	NumTripPos	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5014	
+NumTripDesc	Text		Number of Trips Description	NumTripDesc	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5015	
+NumTripNumDays	Text		Number of Trips Number of Days	NumTripNumDays	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5016	
+SenPresApproval	Choice		Angular President Approval	SenPresApproval	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5017	Approved#Disapproved
+SenPresName	User		Angular President Name	SenPresName	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5018	
+SenPresDate	DateTime		Angular President Date	SenPresDate	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5019	
+ReimAirFare	Text		Reimbursement Airfare	ReimAirFare	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5020	
+ReimAirHotelLod	Text		Reimbursement Hotel/Lodging	ReimAirHotelLod	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5021	
+ReimAirMeals	Text		Reimbursement Meals	ReimAirMeals	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5022	
+ReimAirRegFee	Text		Reimbursement Registration Fee	ReimAirRegFee	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5023	
+ReimAirGrndTrans	Text		Reimbursement Ground transportation	ReimAirGrndTrans	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5024	
+ReimAirOtherVal	Text		Reimbursement Other Value	ReimAirOtherVal	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5025	
+ReimAirOtherExp	Text		Reimbursement Other Explanation	ReimAirOtherExp	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5026	
+ClerkApproval	Choice		Clerk Approval	ClerkApproval	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5027	Approved#Disapproved
+ClerkName	User		Clerk Name	ClerkName	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5028	
+ClerkDate	DateTime		Clerk Date	ClerkDate	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5029	
+Payment	Text		Payment	Payment	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5030	
+Allowance	Text		Allowance	Allowance	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5031	
+ConfirmationNum	Text		Confirmation No(s)	ConfirmationNum	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5032	
+Airline	Text		Airline	Airline	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5033	
+PONum	Text		P.O. No.	PONum	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5034	
+IssuedTo	Text		Issued to	IssuedTo	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5035	
+AirFareDate	Text		Airfare Date	AirFareDate	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5036	
+AirFareAmount	Text		Airfare Amount	AirFareAmount	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5037	
+AirFareAdviceNum	Text		Airfare Advice No	AirFareAdviceNum	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5038	
+HotelLodDate	Text		Hotel lodging Date	HotelLodDate	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5039	
+HotelLodAmount	Text		Hotel lodging Amount	HotelLodAmount	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5040	
+HotelLodAdviceNum	Text		Hotel lodging Advice No	HotelLodAdviceNum	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5041	
+MealsDate	Text		Meals Date	MealsDate	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5042	
+MealsAmount	Text		Meals Amount	MealsAmount	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5043	
+MealsAdviceNum	Text		Meals Advice No	MealsAdviceNum	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5044	
+RegisFeeDate	Text		Registration Fee Date	RegisFeeDate	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5045	
+RegisFeeAmount	Text		Registration Fee Amount	RegisFeeAmount	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5046	
+RegisFeeAdviceNum	Text		Registration Fee Advice No	RegisFeeAdviceNum	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5047	
+GroundTransDate	Text		Ground Transportation Date	GroundTransDate	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5048	
+GroundTransAmount	Text		Ground Transportation Amount	GroundTransAmount	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5049	
+GroundTransAdviceNum	Text		Ground Transportation Advice No	GroundTransAdviceNum	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5050	
+OtherDate	Text		Other Date	OtherDate	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5051	
+OtherAmount	Text		Other Amount	OtherAmount	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5052	
+OtherAdviceNum	Text		Other Advice No	OtherAdviceNum	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5053	
+CloseProcess	Boolean		Close Process	CloseProcess	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5054	
+TravelStatus	Choice		Travel Status	TravelStatus	Angular	FALSE	FALSE	FALSE	TRUE	TRUE	TRUE	79658c1e-3096-5544-2235-4335501a5055	Approved#Disapproved

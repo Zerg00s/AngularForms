@@ -84,7 +84,7 @@ namespace Provision.Console
 	            InternalName = "Requestor",
 	            Id = new Guid("03375b67-01f5-4887-9e3e-2702dfb8c318"),
 	            FieldType = BuiltInFieldTypes.User,
-	            Group = "Senate",
+	            Group = "Angular",
 	            //Required = true
             };
 
@@ -94,25 +94,25 @@ namespace Provision.Console
 	            InternalName = "Manager",
 	            Id = new Guid("07733367-01f5-47d7-9e3e-2712dfb8c318"),
 	            FieldType = BuiltInFieldTypes.User,
-            Group = "Senate",
+            Group = "Angular",
             };
 		
             public static DateTimeFieldDefinition StartDate = new DateTimeFieldDefinition
             {
 	            Title = "Start Date",
-	            InternalName = "StartDateSenate",
+	            InternalName = "StartDateAngular",
 	            Id = new Guid("07777767-01f5-47d7-9e3e-2712dfb33318"),
 	            DisplayFormat = BuiltInDateTimeFieldFormatType.DateOnly,
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static DateTimeFieldDefinition EndDate = new DateTimeFieldDefinition
             {
 	            Title = "End Date",
-	            InternalName = "EndDateSenate",
+	            InternalName = "EndDateAngular",
 	            Id = new Guid("33777777-01f5-47d7-9e3e-2712dfb8c318"),
 	            DisplayFormat = BuiltInDateTimeFieldFormatType.DateOnly,
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static NumberFieldDefinition NumberOfDays = new NumberFieldDefinition
@@ -120,7 +120,7 @@ namespace Provision.Console
 	            Title = "Number of Days",
 	            InternalName = "NumberOfDays",
 	            Id = new Guid("06975557-33f5-47d7-9e2e-2702dfb8c218"),
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static ChoiceFieldDefinition NumberOfDaysFraction = new ChoiceFieldDefinition
@@ -130,7 +130,7 @@ namespace Provision.Console
 	            Id = new Guid("06975557-33f5-47d7-332e-2702dfb8c218"),
 	            Choices = new System.Collections.ObjectModel.Collection<string>() {"","0.25", "0.5", "0.75" },
 	            DefaultValue = "",
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static ChoiceFieldDefinition TypeOfLeave = new ChoiceFieldDefinition
@@ -140,7 +140,7 @@ namespace Provision.Console
 	            Id = new Guid("06975b67-0335-47d7-9e3e-2702dfb8c318"),
 	            Choices = new System.Collections.ObjectModel.Collection<string>() {"Vacation", "Sick", "Education" },
 	            DefaultValue = "",
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static ChoiceFieldDefinition WithPay = new ChoiceFieldDefinition
@@ -151,7 +151,7 @@ namespace Provision.Console
 	            Choices = new System.Collections.ObjectModel.Collection<string>() {"Yes", "No" },
 	            EditFormat = "RadioButtons",
             DefaultValue = "Yes",
-            Group = "Senate",
+            Group = "Angular",
             };
 
             public static ChoiceFieldDefinition ManagerApproval = new ChoiceFieldDefinition
@@ -162,7 +162,7 @@ namespace Provision.Console
 	            Choices = new System.Collections.ObjectModel.Collection<string>() {"Approved", "Declined" },
 	            EditFormat = "RadioButtons",
             DefaultValue = "",
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static FieldDefinition ApproverComments = new FieldDefinition
@@ -171,7 +171,7 @@ namespace Provision.Console
 	            InternalName = "ApproverComments",
 	            Id = new Guid("01375337-01f5-47d7-9e2e-2702dfb8c218"),
 	            FieldType = BuiltInFieldTypes.Note,
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
 
@@ -181,7 +181,7 @@ namespace Provision.Console
 	            InternalName = "ApproverDate",
 	            Id = new Guid("06675b67-01f5-47d7-9e2e-27033fb8c218"),
 	            DisplayFormat = BuiltInDateTimeFieldFormatType.DateOnly,
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static ChoiceFieldDefinition OptionalApproval = new ChoiceFieldDefinition
@@ -192,7 +192,7 @@ namespace Provision.Console
 	            Choices = new System.Collections.ObjectModel.Collection<string>() { "Approved", "Declined" },
 	            EditFormat = "RadioButtons",
 	            DefaultValue = "",
-	            Group = "Senate",
+	            Group = "Angular",
             };
 			
             public static  FieldDefinition OptionalApproverComments = new  FieldDefinition
@@ -201,7 +201,7 @@ namespace Provision.Console
 	            InternalName = "OptionalApproverComments",
 	            Id = new Guid("06666b67-33f5-47d7-9e2e-2702dfb8c218"),
 	            FieldType = BuiltInFieldTypes.Note,
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static FieldDefinition OptionalApproverUser = new FieldDefinition
@@ -210,7 +210,7 @@ namespace Provision.Console
 	            InternalName = "OptionalApproverUser",
 	            Id = new Guid("03366667-01f5-47d7-9e2e-27044fb8c218"),
 	            FieldType = BuiltInFieldTypes.User,
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static FieldDefinition OptionalApproverText = new FieldDefinition
@@ -219,7 +219,7 @@ namespace Provision.Console
 	            InternalName = "OptionalApproverText",
 	            Id = new Guid("03366667-01f5-47d7-9e2e-4402dfb8c218"),
 	            FieldType = BuiltInFieldTypes.Text,
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static DateTimeFieldDefinition OptionalApproverDate = new DateTimeFieldDefinition
@@ -228,7 +228,7 @@ namespace Provision.Console
 	            InternalName = "OptionalApproverDate",
 	            Id = new Guid("06675b67-01f5-47d7-9e2e-33033338c218"),
 	            DisplayFormat = BuiltInDateTimeFieldFormatType.DateOnly,
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             //--------------------
@@ -240,7 +240,7 @@ namespace Provision.Console
 	            Choices = new System.Collections.ObjectModel.Collection<string>() { "Approved", "Declined" },
 	            EditFormat = "RadioButtons",
 	            DefaultValue = "",
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
 
@@ -250,7 +250,7 @@ namespace Provision.Console
 	            InternalName = "AccountingApproverComments",
 	            Id = new Guid("06666447-33f5-47d7-9e2e-2702dfb8c218"),
 	            FieldType = BuiltInFieldTypes.Note,
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static FieldDefinition AccountingApprover = new FieldDefinition
@@ -259,7 +259,7 @@ namespace Provision.Console
 	            InternalName = "AccountingApprover",
 	            Id = new Guid("03366667-01f5-47d7-442e-2702dfb8c218"),
 	            FieldType = BuiltInFieldTypes.Text,
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static DateTimeFieldDefinition AccountingApproverDate = new DateTimeFieldDefinition
@@ -268,7 +268,7 @@ namespace Provision.Console
 	            InternalName = "AccountingApproverDate",
 	            Id = new Guid("06675b67-01f5-47d7-9e2e-44033338c218"),
 	            DisplayFormat = BuiltInDateTimeFieldFormatType.DateOnly,
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
             public static FieldDefinition Status = new FieldDefinition
@@ -277,7 +277,7 @@ namespace Provision.Console
 	            InternalName = "WFStatus",
 	            Id = new Guid("04465b67-33f5-47d7-9323-2702dfb8c218"),
 	            FieldType = BuiltInFieldTypes.Text,
-	            Group = "Senate",
+	            Group = "Angular",
             };
 
         }// end of Fields class
@@ -290,7 +290,7 @@ namespace Provision.Console
 	            Name = LeaveOfAbsence,
 	            Id = new Guid("79658c1e-3096-4c44-b335-4338d01a5b91"),
 	            ParentContentTypeId = BuiltInContentTypeId.Item,
-	            Group = "Senate"
+	            Group = "Angular"
             };
         }
 

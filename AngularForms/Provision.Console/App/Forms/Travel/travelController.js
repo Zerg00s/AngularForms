@@ -107,7 +107,7 @@ app.controller('MainCtrl', function ($scope, $http, $log, $location,spFormFactor
         if (groupName == 'Accounting'){
                 $scope.isAccounting = true;
         }            
-        else if (groupName == 'Senate President'){
+        else if (groupName == 'Angular President'){
             $scope.isPresident = true;
         }
         else if (groupName == 'Travel Request Clerk' ){
@@ -120,7 +120,7 @@ app.controller('MainCtrl', function ($scope, $http, $log, $location,spFormFactor
         if ($scope.f.TravelStatus.Value == null){
             return;
         }
-        if ($scope.f.TravelStatus.Value == 'Pending Senate President Approval') {
+        if ($scope.f.TravelStatus.Value == 'Pending Angular President Approval') {
             $scope.PresidentStage = true;             
         }
         else if ($scope.f.TravelStatus.Value == "Pending Clerk Approval"){

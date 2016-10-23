@@ -142,20 +142,20 @@ all-inputs-disabled="formMode != 'New'">
 
 <!-- S E N A T E   P R E S I D E N T   A P P R O V A L  -->
 <div ng-show="formMode !='New'">
-    <div class="row fields"   id="senate-president-approval-row" ng-show="(f.TypeTravel.Value != 'Home Island' || (f.NumTrips.Value && f.NumTrips.Value != 'Allocated')) &&  f.TypeTravel.Value">  
-        <h3>Senate President Approval</h3><br>   
+    <div class="row fields"   id="Angular-president-approval-row" ng-show="(f.TypeTravel.Value != 'Home Island' || (f.NumTrips.Value && f.NumTrips.Value != 'Allocated')) &&  f.TypeTravel.Value">  
+        <h3>Angular President Approval</h3><br>   
         <div class='col-md-4 col-xs-6'>
-            <!--Senate President Approval | Type: Choice -->
+            <!--Angular President Approval | Type: Choice -->
             <h4>{{f.SenPresApproval.FieldDisplayName}}</h4>
             <radio-field name='SenPresApproval' field='f.SenPresApproval' ng-disabled="PresidentCanEditNow != true" ng-required='PresidentCanEditNow' id='SenPresApproval' name='SenPresApproval' class='choice-field'> </radio-field>
         </div>
         <div class='col-md-4 col-xs-6' ng-show='f.SenPresName.user'>
-            <!--Senate President Name | Type: User -->
+            <!--Angular President Name | Type: User -->
             <h4>{{f.SenPresName.FieldDisplayName}}</h4>
             <div name='SenPresName' ng-model='f.SenPresName.user' id='SenPresName' ng-disabled="true" ui-people pp-is-multiuser='{false}' pp-width='220px' pp-account-type='User,DL,SecGroup,SPGroup'> </div>
         </div>
         <div class='col-md-4 col-xs-6' ng-show='f.SenPresName.user'>
-            <!--Senate President Date | Type: DateTime -->
+            <!--Angular President Date | Type: DateTime -->
             <h4>{{f.SenPresDate.FieldDisplayName}}</h4>
             {{ moment(f.SenPresDate.Value).format('DD-MMMM-YYYY')}}
         </div>

@@ -108,7 +108,6 @@
     <Compile Include="Models\Assets.cs" />
     <Compile Include="Models\ExcelBasedListModel.cs" />
     <Compile Include="Models\Rooms.cs" />
-    <Compile Include="Models\SecurityGroupsDefinition.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\ContentTypeHelper.cs" />

@@ -3,7 +3,7 @@
 app.controller('MainCtrl', function ($scope, $http, $log, $location, spFormFactory) {    
     $scope.spFormFactory = spFormFactory;
 
-    spFormFactory.initialize($scope, 'Senate Room Reservation').then(init);
+    spFormFactory.initialize($scope, 'Angular Room Reservation').then(init);
     $scope.calendarFormat = 'dd-MMMM-yyyy';
     $scope.userId = _spPageContextInfo.userId;
     $scope.moment = window.moment;
@@ -152,7 +152,7 @@ app.controller('MainCtrl', function ($scope, $http, $log, $location, spFormFacto
                  $scope.isWAM = true;
                  $scope.isRoomApprover  = true;
             }            
-            else if (groupName == 'Senate President' && room == "Chamber"){
+            else if (groupName == 'Angular President' && room == "Chamber"){
                 $scope.isPresident = true;
                 $scope.isRoomApprover  = true;
             }
