@@ -105,6 +105,7 @@
   <ItemGroup>
     <Compile Include="Extenstons\StringExtentions.cs" />
     <Compile Include="Models\Assets.cs" />
+    <Compile Include="Models\Attachments.cs" />
     <Compile Include="Models\ExcelBasedListModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
