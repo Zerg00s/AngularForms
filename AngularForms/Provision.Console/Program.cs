@@ -20,10 +20,10 @@ namespace Provision.Console
 		public const string AssetsLibraryInternalname = "Assets";
 		#endregion
 
-		static void Main(string[] args)
+		static void Main(string[] args) 
 		{
-			string targetSiteUrl = "https://jolera365.sharepoint.com/sites/demo/subsite";
-			string userLogin = @"dmolodtsov@jolera.com";
+			string targetSiteUrl = "https://365.sharepoint.com/sites/demo/subsite";
+			string userLogin = @"dmolodtsov@365.com";
 			string targetListTitle = "SampleList2";
 
             var clientContext = ContextHelper.GetClientContext(targetSiteUrl, userLogin);
