@@ -1,5 +1,6 @@
 # Angular Forms Scaffolding for SharePoint List Items
 Custom SharePoint Forms for SharePoint 2013/2016/SPOnline. Using AngularJS
+
 Angular View and Controller is automatically generated and applied for the target SharePoint list of your choice.
 
 ![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/FormSample.jpg?raw=true)
@@ -7,7 +8,7 @@ Angular View and Controller is automatically generated and applied for the targe
 ## How to Deploy Angular Forms:
 - Download the project
 - Open it with Visual Studio
-- Specify site url, your login and a target list that will have Angular forms applied
+- Specify site URL, your login and a target list that will have Angular forms applied
 - Hit F5 to deploy. Angular view and controller will be automatically generated depending on the current list fields
 
 ![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/Deploy.jpg?raw=true)
@@ -19,18 +20,18 @@ Angular views and controllers will be deployed in the /Assets/App/Forms/Your_Lis
 
 You will have to know your field internal names to be able to refer them.
 From the controller you refer to the fields like so: $scope.f.fieldName.Value. 
-From the View you refer to the fiels like so: {{f.fieldName.Value}} or ng-model="f.fieldName.Value" 
+From the View you refer to the fields like so: {{f.fieldName.Value}} or ng-model="f.fieldName.Value" 
 
-The generated Angular form is just a scaffolding and is meant to be modified according to your business logic. You will probably want to add ng-requred, ng-hidden, et. to your fields
+The generated Angular form is just a scaffolding and is meant to be modified according to your business logic. You will probably want to add ng-required, ng-hidden, et. to your fields
 
-Saving and loading happends automatically. Not all field types are avaliable. Refer to the bottom seciton for the full list.
+Saving and loading happens automatically. Not all field types are available. Refer to the bottom section for the full list.
 
 Missing field types:
 - multichoice
 - lookup/multilookup
 - taxonomy 
 
-Feel free to controbute to the Angular service spFormFactory.js to include support for the the missing field types
+Feel free to contribute to the Angular service spFormFactory.js to include support for the missing field types
 
 ## Available field types: 
 ```
