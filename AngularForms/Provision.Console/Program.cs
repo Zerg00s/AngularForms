@@ -31,7 +31,7 @@ namespace Provision.Console
 			clientContext.Load(targetList);
 			clientContext.ExecuteQuery();
 
-			DeployListsAndLibraries(clientContext);
+			DeployListsAndLibraries(clientContext, targetList);
 
 			AngularHelper.GenerateView(clientContext, targetList);
 
@@ -43,33 +43,32 @@ namespace Provision.Console
 			System.Console.ReadKey(true);
 		}
 
-		private static void DeployListsAndLibraries(ClientContext clientContext)
+		private static void DeployListsAndLibraries(ClientContext clientContext, List targetList)
 		{
+			var csomProvisionService = new CSOMProvisionService();
+
 			var webModel = SPMeta2Model.NewWebModel();
 			webModel.AddList(Assets.listDefinition);
-			var csomProvisionService = new CSOMProvisionService();
+			webModel.AddList(Attachments.listDefinition);
 			csomProvisionService.DeployWebModel(clientContext, webModel);
 
-			return;
-			var assetsList = clientContext.Web.Lists.GetByTitle(Assets.listDefinition.Title);
-			clientContext.Load(assetsList);
-			clientContext.ExecuteQuery();
-
-			var attachmentsField = new LookupFieldDefinition
+			var attachmentsFieldDefinition = new LookupFieldDefinition
 			{
 				Title = "ParentItemID",
 				InternalName = "ParentItemID",
 				Group = "Angular",
 				Id = new Guid("FEFC30A7-3B38-4034-BB2A-FFD538D46A62"),
-				//LookupListTitle = assetsList.Title
+				LookupListTitle = targetList.Title,
 				//Error: SPMETA2: tries to get Assets list from the root web insted of the current web
 				//https://jolera365.sharepoint.com/sites/senate
+				LookupWebId = clientContext.Web.Id,
+				LookupField = "ID"
 			};
 
 			var lookupFieldModel = SPMeta2Model.NewWebModel(web =>
 			{
 				web
-					 .AddField(attachmentsField);
+					 .AddField(attachmentsFieldDefinition);
 			});
 			
 			csomProvisionService.DeployWebModel(clientContext, lookupFieldModel);
