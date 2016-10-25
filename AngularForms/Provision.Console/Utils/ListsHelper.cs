@@ -89,7 +89,8 @@ namespace Provision.Console.Utils
 						}
 					}
 
-					System.IO.File.WriteAllText(@"Models\" + fileName, lines.ToString());
+                    System.IO.Directory.CreateDirectory("Models");
+			        System.IO.File.WriteAllText(@"Models\" + fileName, lines.ToString());
 				}
 	}
 }

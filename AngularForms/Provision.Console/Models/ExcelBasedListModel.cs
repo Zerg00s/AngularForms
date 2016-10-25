@@ -109,22 +109,23 @@ namespace Provision.Console.Models
 			string destinationFolder = string.Format("App\\Forms\\{0}", ListInternalName);
 			System.IO.Directory.CreateDirectory(destinationFolder);
 			var k = FieldDefnitions;
-			StringBuilder builder = new StringBuilder();
+			StringBuilder AngularForm = new StringBuilder();
 
 			foreach (xField field in xFields)
 			{
-            builder.Append(field.AngularView);
-         }
+                AngularForm.Append(field.AngularView);
+            }
 
 			System.IO.File.Delete(string.Format("App\\Forms\\{0}\\{0}Fields.html", ListInternalName));
-			
-         System.IO.File.WriteAllText(string.Format("App\\Forms\\{0}\\{0}Fields.html", ListInternalName), builder.ToString());
+
+            XElement formattedAngularForm = XElement.Parse(AngularForm.ToString());
+            System.IO.File.WriteAllText(string.Format("App\\Forms\\{0}\\{0}Fields.html", ListInternalName), formattedAngularForm.ToString());
 
 			string destinationControlerFile = destinationFolder + "\\" + ListInternalName + "Controller.js";
 			string destinationViewFile = destinationFolder + "\\" + ListInternalName + "Form.html";
 			System.IO.File.Delete(destinationControlerFile);
 			System.IO.File.Delete(destinationViewFile);
-         System.IO.File.Copy(templateFolder + @"\sampleController.js", destinationControlerFile);
+            System.IO.File.Copy(templateFolder + @"\sampleController.js", destinationControlerFile);
 			System.IO.File.Copy(templateFolder + @"\sampleForm.html", destinationViewFile);
 
 			string controlerText = System.IO.File.ReadAllText(destinationControlerFile);
@@ -135,7 +136,7 @@ namespace Provision.Console.Models
 			viewText = viewText.Replace("LIST_NAME", ListInternalName);
 			System.IO.File.WriteAllText(destinationViewFile, viewText);
 
-			return builder.ToString();
+			return AngularForm.ToString();
       }
 
 		public List<string> GetAllFieldNames()

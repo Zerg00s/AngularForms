@@ -22,11 +22,11 @@ namespace Provision.Console
 
 		static void Main(string[] args)
 		{
-			string targetSiteUrl = "https://365.sharepoint.com/sites/senate/subsite/subsite2";
+			string targetSiteUrl = "https://365.sharepoint.com/sites/demo/subsite";
 			string userLogin = @"dmolodtsov@365.com";
 			string targetListTitle = "SampleList2";
 
-         var clientContext = ContextHelper.GetClientContext(targetSiteUrl, userLogin);
+            var clientContext = ContextHelper.GetClientContext(targetSiteUrl, userLogin);
 			List targetList = clientContext.Web.Lists.GetByTitle(targetListTitle);
 			clientContext.Load(targetList);
 			clientContext.ExecuteQuery();
@@ -35,13 +35,12 @@ namespace Provision.Console
 
 			AngularHelper.GenerateView(clientContext, targetList);
 
-         FileHelper.UploadFoldersRecursively(clientContext, SourceFolder, AppDestinationLibraryTitle);
+            FileHelper.UploadFoldersRecursively(clientContext, SourceFolder, AppDestinationLibraryTitle);
 
 			WebPartsHelper.AddCEWPToList(clientContext, targetList);
 
-			System.Console.WriteLine("PRESS ANY KEY TO EXIT");
-			System.Console.ReadKey(true);
-		}
+            System.Diagnostics.Process.Start(new Uri(clientContext.Web.Url).GetLeftPart(UriPartial.Authority) + "/" + targetList.DefaultNewFormUrl);
+        }
 
 		private static void DeployListsAndLibraries(ClientContext clientContext, List targetList)
 		{
@@ -49,7 +48,7 @@ namespace Provision.Console
 
 			var webModel = SPMeta2Model.NewWebModel();
 			webModel.AddList(Assets.listDefinition);
-			webModel.AddList(Attachments.listDefinition);
+			
 			csomProvisionService.DeployWebModel(clientContext, webModel);
 
 			var attachmentsFieldDefinition = new LookupFieldDefinition
@@ -57,22 +56,21 @@ namespace Provision.Console
 				Title = "ParentItemID",
 				InternalName = "ParentItemID",
 				Group = "Angular",
-				Id = new Guid("FEFC30A7-3B38-4034-BB2A-FFD538D46A62"),
+				Id = new Guid("FEF440A7-3228-4034-BB2A-FFD538D46A62"),
 				LookupListTitle = targetList.Title,
-				//Error: SPMETA2: tries to get Assets list from the root web insted of the current web
-				//https://jolera365.sharepoint.com/sites/senate
 				LookupWebId = clientContext.Web.Id,
-				LookupField = "ID"
+				LookupField = "ID",
+                RelationshipDeleteBehavior = "Cascade",
+                Indexed = true
 			};
 
 			var lookupFieldModel = SPMeta2Model.NewWebModel(web =>
 			{
-				web
-					 .AddField(attachmentsFieldDefinition);
+				web.AddField(attachmentsFieldDefinition);
 			});
-			
-			csomProvisionService.DeployWebModel(clientContext, lookupFieldModel);
-			//error: duplicate field ParentItemID was found...
+
+            webModel.AddList(Attachments.listDefinition, list => list.AddField(attachmentsFieldDefinition));
+            csomProvisionService.DeployWebModel(clientContext, webModel);
 		}
 	}
 }
