@@ -3,13 +3,7 @@ app.controller('MainCtrl', function ($scope, $http, $log, $location, spFormFacto
     $scope.spFormFactory = spFormFactory;
 
     spFormFactory.initialize($scope, 'LIST_TITLE').then(init);
-    $scope.calendarFormat = 'dd-MMMM-yyyy';
-    $scope.userId = _spPageContextInfo.userId;
-    $scope.moment = window.moment;
-
-    if (window.location.href.indexOf('NewForm.aspx') != -1){
-        $scope.CurrentUserPartOfWorkflow = true;
-    }
+    $scope.calendarFormat = 'dd-MMMM-yyyy';   
 
     $scope.saveWithButtonDisabled = function(){
         $scope.hideSaveButton = 'true';

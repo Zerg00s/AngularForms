@@ -25,6 +25,7 @@ app.factory('spFormFactory', function($location, $http, $log, $q, $rootScope) {
         scope.formMode = spFormFactory.formMode;
         scope.save = spFormFactory.save;
         scope.cancel = spFormFactory.cancel;
+        scope.userId = _spPageContextInfo.userId;
 
         //OOTB SharePoint Save button ovverride: 
         window.PreSaveAction = function() {

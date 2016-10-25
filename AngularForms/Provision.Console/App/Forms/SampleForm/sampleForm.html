@@ -7,7 +7,7 @@
     <div id='formContainer' ng-show="spFormFactory.loading != true" >
         <h2>{{ListTitle}}<b></b></h2>
         <h3>
-            <div class="fa fa-print non-printable" title='Print this form' style="color:#0072C6;font-size:30px" onclick="window.print();return false;" ng-if="formMode != 'New'"></div>
+           {{formMode}} <div class="fa fa-print non-printable" title='Print this form' style="color:#0072C6;font-size:30px" onclick="window.print();return false;" ng-if="formMode != 'New'"></div>
         </h3>
         <hr>
         <ng-form name="mainForm">   
