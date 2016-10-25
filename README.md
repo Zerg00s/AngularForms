@@ -1,9 +1,37 @@
-# AngularForms
+# Angular Forms Scaffolding for SharePoint List Items
 Custom SharePoint Forms for SharePoint 2013/2016/SPOnline. Using AngularJS
+
+Angular View and Controller is automatically generated and applied for the target SharePoint list of your choice.
 
 ![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/FormSample.jpg?raw=true)
 
+## How to Deploy Angular Forms:
+- Download the project
+- Open it with Visual Studio
+- Specify site URL, your login and a target list that will have Angular forms applied
+- Hit F5 to deploy. Angular view and controller will be automatically generated depending on the current list fields
 
+![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/Deploy.jpg?raw=true)
+
+
+## How to start development:
+Map the /Assets/App folder using WebDav. First Open it in Internet Explorer for authentication purposes. Open it in Visual Studio Code.
+Angular views and controllers will be deployed in the /Assets/App/Forms/Your_List_Name/ folder.
+
+You will have to know your field internal names to be able to refer them.
+From the controller you refer to the fields like so: $scope.f.fieldName.Value. 
+From the View you refer to the fields like so: {{f.fieldName.Value}} or ng-model="f.fieldName.Value" 
+
+The generated Angular form is just a scaffolding and is meant to be modified according to your business logic. You will probably want to add ng-required, ng-hidden, et. to your fields
+
+Saving and loading happens automatically. Not all field types are available. Refer to the bottom section for the full list.
+
+Missing field types:
+- multichoice
+- lookup/multilookup
+- taxonomy 
+
+Feel free to contribute to the Angular service spFormFactory.js to include support for the missing field types
 
 ## Available field types: 
 ```
@@ -50,6 +78,12 @@ Custom SharePoint Forms for SharePoint 2013/2016/SPOnline. Using AngularJS
 
 <!-- number -->
 <input type="number" ng-model="f.NumberOfDays.Value" min="0" id="NumberOfDays" />
+
+<!-- currency -->
+<div class='col-md-4 col-xs-6'>
+    <h4>Price</h4>
+    <input type='text' maxlength='254' id='Price' name='Price' ng-model='f.Price.Value' class='full-width' ng-currency  placeholder="insert currency value"  />
+</div>
 
 <!-- single line text -->
 <div class="col-md-3 col-xs-4">
