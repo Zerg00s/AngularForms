@@ -1,7 +1,7 @@
 # Angular Forms Scaffolding for SharePoint List Items
 Custom SharePoint Forms for SharePoint 2013/2016/SPOnline. Using AngularJS
 
-Angular View and Controller is automatically generated and applied for the target SharePoint list of your choice.
+Angular View and Controller are automatically generated and applied for the target SharePoint list of your choice.
 
 ![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/FormSample.jpg?raw=true)
 
