@@ -1,7 +1,7 @@
 # AngularForms
 Custom SharePoint Forms for SharePoint 2013/2016/SPOnline. Using AngularJS
 
-![Form Sample](https://github.com/Zerg00s/AngularForms/edit/master/FormSample.jpg)
+![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/FormSample.jpg?raw=true)
 
 
 
