@@ -3,7 +3,31 @@ Custom SharePoint Forms for SharePoint 2013/2016/SPOnline. Using AngularJS
 
 ![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/FormSample.jpg?raw=true)
 
+## How to Deploy Angular Forms:
+- Download the project
+- Open it with Visual Studio
+- Specify Site url, your login and a target that will have Angular forms applied 
+- Hit F5 to deploy
 
+![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/Deploy.jpg?raw=true)
+
+
+## How to start development:
+Map the /Assets/App folder using WebDav. First Open it in Internet Explorer for authentication purposes. Open it in Visual Studio Code.
+Angular views and controllers will be deployed in the /Assets/App/Forms/Your_List_Name/ folder.
+
+You will have to know your field internal names. 
+From the controller you refer to the fiels like so: $scope.f.fieldName.Value. 
+From the View you refer to the fiels like so: {{f.fieldName.Value}} or ng-model="f.fieldName.Value" 
+
+Saving and loading happends automatically.  Not all field types are avaliable. Refer to the bottom seciton for the full list.
+
+Missing field types:
+- multichoice
+- lookup/multilookup
+- taxonomy 
+
+Feel free to controbute to the Angular service spFormFactory.js to include support for the the missing field types
 
 ## Available field types: 
 ```
