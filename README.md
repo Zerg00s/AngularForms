@@ -1,10 +1,12 @@
 # AngularForms
 Custom SharePoint Forms for SharePoint 2013/2016/SPOnline. Using AngularJS
 
+![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/FormSample.jpg?raw=true)
 
 
+
+## Available field types: 
 ```
-<pre>
 <!-- user field -->
 <div class="col-md-4 col-xs-6">
     <h4>{{f.Requestor.FieldDisplayName}}</h4>
@@ -72,5 +74,4 @@ Custom SharePoint Forms for SharePoint 2013/2016/SPOnline. Using AngularJS
     <!-- show-display-name-field: true if you want to rename the files-->
     <!-- attachment-doc-folder-name: name of the folder in the Attachments library where you want to store the documents. default is '' - root -->
 </div>
-</pre>
 ```
