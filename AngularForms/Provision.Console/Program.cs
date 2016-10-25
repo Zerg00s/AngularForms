@@ -22,8 +22,8 @@ namespace Provision.Console
 
 		static void Main(string[] args)
 		{
-			string targetSiteUrl = "https://365.sharepoint.com/sites/demo/subsite";
-			string userLogin = @"dmolodtsov@365.com";
+			string targetSiteUrl = "https://jolera365.sharepoint.com/sites/demo/subsite";
+			string userLogin = @"dmolodtsov@jolera.com";
 			string targetListTitle = "SampleList2";
 
             var clientContext = ContextHelper.GetClientContext(targetSiteUrl, userLogin);
@@ -39,6 +39,7 @@ namespace Provision.Console
 
 			WebPartsHelper.AddCEWPToList(clientContext, targetList);
 
+            //Open the Form in the browser:
             System.Diagnostics.Process.Start(new Uri(clientContext.Web.Url).GetLeftPart(UriPartial.Authority) + "/" + targetList.DefaultNewFormUrl);
         }
 

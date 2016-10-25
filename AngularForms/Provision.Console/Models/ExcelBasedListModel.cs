@@ -18,6 +18,7 @@ using SPMeta2.Definitions.Fields;
 using SPMeta2.Definitions.ContentTypes;
 using Provision.Console.Utils;
 using System.Xml.Linq;
+using System.Xml;
 
 namespace Provision.Console.Models
 {
@@ -119,6 +120,7 @@ namespace Provision.Console.Models
 			System.IO.File.Delete(string.Format("App\\Forms\\{0}\\{0}Fields.html", ListInternalName));
 
             XElement formattedAngularForm = XElement.Parse(AngularForm.ToString());
+
             System.IO.File.WriteAllText(string.Format("App\\Forms\\{0}\\{0}Fields.html", ListInternalName), formattedAngularForm.ToString());
 
 			string destinationControlerFile = destinationFolder + "\\" + ListInternalName + "Controller.js";
@@ -178,9 +180,7 @@ namespace Provision.Console.Models
 						{
 									new ContentTypeLinkValue{ ContentTypeName = ContentTypeDefinition.Name},
 						}
-				})
-			//.AddListView(deploymentDefaultView)
-			//.AddListView(deploymentFullView)
+				}) 
 			;
 			});
 		}
