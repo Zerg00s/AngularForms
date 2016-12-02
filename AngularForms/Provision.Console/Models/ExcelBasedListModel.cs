@@ -119,9 +119,7 @@ namespace Provision.Console.Models
 
 			System.IO.File.Delete(string.Format("App\\Forms\\{0}\\{0}Fields.html", ListInternalName));
 
-            XElement formattedAngularForm = XElement.Parse(AngularForm.ToString());
-
-            System.IO.File.WriteAllText(string.Format("App\\Forms\\{0}\\{0}Fields.html", ListInternalName), formattedAngularForm.ToString());
+            System.IO.File.WriteAllText(string.Format("App\\Forms\\{0}\\{0}Fields.html", ListInternalName), AngularForm.ToString());
 
 			string destinationControlerFile = destinationFolder + "\\" + ListInternalName + "Controller.js";
 			string destinationViewFile = destinationFolder + "\\" + ListInternalName + "Form.html";

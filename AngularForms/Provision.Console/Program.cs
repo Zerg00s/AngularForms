@@ -22,9 +22,9 @@ namespace Provision.Console
 
 		static void Main(string[] args) 
 		{
-			string targetSiteUrl = "https://365.sharepoint.com/sites/demo/subsite";
-			string userLogin = @"dmolodtsov@365.com";
-			string targetListTitle = "SampleList2";
+			string targetSiteUrl = "https://jolera365.sharepoint.com/teams/LCBO/testsite";
+			string userLogin = @"dmolodtsov@Jolera.com";
+			string targetListTitle = "t";
 
             var clientContext = ContextHelper.GetClientContext(targetSiteUrl, userLogin);
 			List targetList = clientContext.Web.Lists.GetByTitle(targetListTitle);
