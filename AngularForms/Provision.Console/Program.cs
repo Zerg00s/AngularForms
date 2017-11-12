@@ -14,11 +14,9 @@ namespace Provision.Console
 {
 	class Program
 	{
-		#region constants
 		public const string SourceFolder = "App";
 		public const string AppDestinationLibraryTitle = "Assets";
 		public const string AssetsLibraryInternalname = "Assets";
-		#endregion
 
 		static void Main(string[] args) 
 		{
@@ -37,7 +35,7 @@ namespace Provision.Console
 			clientContext.Load(targetList);
 			clientContext.ExecuteQuery();
 
-			DeployListsAndLibraries(clientContext, targetList);
+			DeployAttachmentsLibrary(clientContext, targetList);
 
 			AngularHelper.GenerateView(clientContext, targetList);
 
@@ -45,11 +43,11 @@ namespace Provision.Console
 
 			WebPartsHelper.AddCEWPToList(clientContext, targetList);
 
-            //Open the Form in the browser:
+            //Open freshly fenerated Form in the browser:
             System.Diagnostics.Process.Start(new Uri(clientContext.Web.Url).GetLeftPart(UriPartial.Authority) + "/" + targetList.DefaultNewFormUrl);
         }
 
-		private static void DeployListsAndLibraries(ClientContext clientContext, List targetList)
+		private static void DeployAttachmentsLibrary(ClientContext clientContext, List targetList)
 		{
 			var csomProvisionService = new CSOMProvisionService();
 
