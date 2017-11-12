@@ -22,12 +22,18 @@ namespace Provision.Console
 
 		static void Main(string[] args) 
 		{
-			string targetSiteUrl = "https://jolera365.sharepoint.com/teams/LCBO/testsite";
-			string userLogin = @"dmolodtsov@Jolera.com";
-			string targetListTitle = "t";
+            System.Console.WriteLine("Enter target site URL");
+			string targetSiteUrl = System.Console.ReadLine();
+
+            System.Console.WriteLine("Enter login");
+            string userLogin  = System.Console.ReadLine();
 
             var clientContext = ContextHelper.GetClientContext(targetSiteUrl, userLogin);
-			List targetList = clientContext.Web.Lists.GetByTitle(targetListTitle);
+
+            System.Console.WriteLine("Enter target list Title");
+            string targetListTitle = System.Console.ReadLine();
+
+            List targetList = clientContext.Web.Lists.GetByTitle(targetListTitle);
 			clientContext.Load(targetList);
 			clientContext.ExecuteQuery();
 
