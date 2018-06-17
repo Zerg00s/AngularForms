@@ -23,7 +23,7 @@ namespace Provision.Console.Utils
 		public bool Required { get; set; }
 		private string AngularStringTemplate = "<div class='col-md-4'><!--{0} | Type: {1} --><h4>{{{{f.{2}.FieldDisplayName}}}}</h4>{3}</div>";
 
-        private string AngularNoteField     = "<textarea        name='{0}' id='{0}' ng-model='f.{0}.Value'></textarea>";
+        private string AngularNoteField     = "<textarea        name='{0}' id='{0}' ng-model='f.{0}.Value' class='full-width'></textarea>";
         private string AngularTextField     = "<input           name='{0}' id='{0}' ng-model='f.{0}.Value' type='text'  class='full-width' />";
 		private string AngularNumberField   = "<input           name='{0}' id='{0}' ng-model='f.{0}.Value' type='number' min='0' />";
 		private string AngularTimeField     = "<input           name='{0}' id='{0}' ng-model='f.{0}.Value' type='time'/>";

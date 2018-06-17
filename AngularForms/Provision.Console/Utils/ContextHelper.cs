@@ -14,7 +14,8 @@ namespace Provision.Console.Utils
 	{
 		public static ClientContext GetClientContext(string siteUrl, string user)
 		{
-			SecureString securePassword = PasswordHelper.GetPasswordFromConsoleInput();
+			SecureString securePassword = PasswordHelper.
+                GetPasswordFromConsoleInput();
 			return GetClientContext(siteUrl, user, securePassword);
 		}
 		public static ClientContext GetClientContext(string siteUrl, string user, string password)

@@ -178,7 +178,7 @@ namespace Provision.Console.Models
 				{
 					ContentTypes = new List<ContentTypeLinkValue>
 						{
-									new ContentTypeLinkValue{ ContentTypeName = ContentTypeDefinition.Name},
+							new ContentTypeLinkValue{ ContentTypeName = ContentTypeDefinition.Name},
 						}
 				}) 
 			;

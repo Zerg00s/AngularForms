@@ -162,6 +162,10 @@ input[disabled='disabled'], input[disabled] {
 	height:20px;
 }
 
+.selectpicker{
+    height:27px;
+}
+
 .time-span{
 	width:80px !important;
 	display: inline-block;

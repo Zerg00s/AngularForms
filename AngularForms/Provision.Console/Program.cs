@@ -5,10 +5,6 @@ using SPMeta2.CSOM.Services;
 using SPMeta2.Definitions.Fields;
 using SPMeta2.Syntax.Default;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Provision.Console
 {
@@ -20,15 +16,24 @@ namespace Provision.Console
 
 		static void Main(string[] args) 
 		{
-            System.Console.WriteLine("Enter target site URL");
-			string targetSiteUrl = System.Console.ReadLine();
+            Introduction();
+            Messenger.Attention("Enter target site URL:");
+            Messenger.Info("Example: https://contoso.sharepoint.com/portal or http://SP2013Portal/subsite/");
+            System.Console.Write("URL: ");
+            string targetSiteUrl = System.Console.ReadLine();
 
-            System.Console.WriteLine("Enter login");
+            Messenger.Attention("Enter login:");
+            Messenger.InfoBold("Examples:");
+            Messenger.Info("SharePoint Online: JohnP@portal.onmicrosoft.com");
+            Messenger.Info("SharePoint Online: JohnPy@contoso.com");
+            Messenger.Info("SharePoint 2013/2016: contoso\\johnP");
+            System.Console.Write("Login: ");
             string userLogin  = System.Console.ReadLine();
 
             var clientContext = ContextHelper.GetClientContext(targetSiteUrl, userLogin);
 
-            System.Console.WriteLine("Enter target list Title");
+            Messenger.Attention("Enter target list Title:");
+            System.Console.Write("List title: ");
             string targetListTitle = System.Console.ReadLine();
 
             List targetList = clientContext.Web.Lists.GetByTitle(targetListTitle);
@@ -43,7 +48,7 @@ namespace Provision.Console
 
 			WebPartsHelper.AddCEWPToList(clientContext, targetList);
 
-            //Open freshly fenerated Form in the browser:
+            //Open freshly generated Form in the browser:
             System.Diagnostics.Process.Start(new Uri(clientContext.Web.Url).GetLeftPart(UriPartial.Authority) + "/" + targetList.DefaultNewFormUrl);
         }
 
@@ -77,5 +82,15 @@ namespace Provision.Console
             webModel.AddList(Attachments.listDefinition, list => list.AddField(attachmentsFieldDefinition));
             csomProvisionService.DeployWebModel(clientContext, webModel);
 		}
+
+
+        private static void Introduction()
+        {
+            Messenger.Attention("*****************************************************************************");
+            Messenger.Success("Angular Forms Generator");
+            Messenger.InfoBold("Automatically Generates an Angular.js form for a specified SharePoint list");
+            Messenger.Attention("*****************************************************************************");
+        }
+
 	}
 }

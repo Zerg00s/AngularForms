@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Provision.Console</RootNamespace>
-    <AssemblyName>Provision.Console</AssemblyName>
+    <AssemblyName>Generate Angular Form</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>angularJs.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Office.Client.Policy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
@@ -112,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extenstons\StringExtentions.cs" />
+    <Compile Include="Messager.cs" />
     <Compile Include="Models\Assets.cs" />
     <Compile Include="Models\Attachments.cs" />
     <Compile Include="Models\ExcelBasedListModel.cs" />
@@ -140,8 +144,18 @@
     <None Include="App\modules\peoplepicker\scripts\angular-sanitize.min.js.map" />
     <None Include="App\modules\peoplepicker\scripts\angular.min.js.map" />
     <None Include="packages.config" />
+    <None Include="PowerShell\ADD_TEST_DATA.bat" />
+    <None Include="PowerShell\ADD_TEST_DATA.ps1" />
+    <None Include="PowerShell\DeploymentSteps\ADD_TEST_DATA.ps1" />
+    <None Include="PowerShell\DeploymentSteps\DEPLOYMENT_CONFIG.ps1" />
+    <None Include="PowerShell\DeploymentSteps\DEPLOY_LISTS_AND_FIELDS.ps1" />
+    <None Include="PowerShell\DeploymentSteps\TestData\Dental Courses.json" />
+    <None Include="PowerShell\DEPLOY_ARTIFACTS.bat" />
+    <None Include="PowerShell\DEPLOY_ARTIFACTS.ps1" />
+    <None Include="Releases\Release package.zip" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="angularJs.ico" />
     <Content Include="App\app.js" />
     <Content Include="App\directives\choiceField.html" />
     <Content Include="App\directives\commonDirectives.js" />
@@ -166,6 +180,7 @@
     <Content Include="App\services\spFormFactory.js" />
     <Content Include="App\styles\common.css" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /s /d /y /i "$(ProjectDir)App" "$(TargetDir)App"</PostBuildEvent>
