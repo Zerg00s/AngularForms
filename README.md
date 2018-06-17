@@ -1,21 +1,26 @@
-# Automatically Generates AngularJs Form for any SharePoint list
-Custom SharePoint Forms for SharePoint 2013/2016/SPOnline. Using AngularJS
+# Automatically Generates AngularJs Form for any SharePoint List
+Works with SharePoint 2013, 2016 and SPOnline
 
 Angular View and Controller are automatically generated and applied to the target SharePoint list of your choice.
 
 ![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/FormSample.jpg?raw=true)
 
 ## How to Deploy Angular Forms:
-- Download the project
-- Open it with Visual Studio
-- Specify site URL, your login and a target list title that will have Angular forms applied to it
-- Hit F5 to deploy. Angular view and controller will be automatically generated depending on the current list fields
+- Download the latest release as a ZIP-archive [from here](https://github.com/Zerg00s/AngularForms/blob/master/AngularForms/Provision.Console/Releases/Release%20package.zip)
+- Extract the folder and run .EXE file
+- Specify the full URL of the site with the existing list
+- Enter your login 
+- Enter Passowrd
+- Enter list display name. For example, Courses
+- Angular view and controller will be automatically generated based on the list you selected
 
-![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/Deploy.jpg?raw=true)
 
 
-## How to start development:
-Map the /Assets/App folder using WebDav. First Open it in Internet Explorer for authentication purposes. Open it in Visual Studio Code.
+![Deploy sample](https://github.com/Zerg00s/AngularForms/blob/master/AngularForms.gif?raw=true)
+
+
+## How to modify the form
+Assuming you are not familiar with modern tools like SPGO or SPPP, I will just suggest mapping the /Assets/App folder using WebDav. First Open it in Internet Explorer for authentication purposes. Open it in Visual Studio Code.
 Angular views and controllers will be deployed in the /Assets/App/Forms/Your_List_Name/ folder.
 
 You will have to know your field internal names to be able to refer them.
