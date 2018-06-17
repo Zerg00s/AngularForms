@@ -20,7 +20,7 @@ Angular View and Controller are automatically generated and applied to the targe
 
 
 ## How to modify the form
-Assuming you are not familiar with modern tools like SPGO or SPPP, I will just suggest mapping the /Assets/App folder using WebDav. First Open it in Internet Explorer for authentication purposes. Open it in Visual Studio Code.
+Assuming you are not familiar with modern tools like [SPGO](https://marketplace.visualstudio.com/items?itemName=SiteGo.spgo) or [SPPP](https://github.com/koltyakov/generator-sppp), I will just suggest mapping the /Assets/App folder using WebDav. First Open it in Internet Explorer for authentication purposes. Open it in Visual Studio Code.
 Angular views and controllers will be deployed in the /Assets/App/Forms/Your_List_Name/ folder.
 
 You will have to know your field internal names to be able to refer them.
