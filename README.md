@@ -6,7 +6,7 @@ Angular View and Controller are automatically generated and applied to the targe
 ![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/FormSample.jpg?raw=true)
 
 ## How to Deploy Angular Forms:
-- Download the latest release as a ZIP-archive [from here](https://github.com/Zerg00s/AngularForms/blob/master/AngularForms/Provision.Console/Releases/Release%20package.zip)
+- Download the latest release as a ZIP-archive [from here](https://github.com/Zerg00s/AngularForms/raw/master/AngularForms/Provision.Console/Releases/Release%20package.zip)
 - Extract the folder and run .EXE file
 - Specify the full URL of the site with the existing list
 - Enter your login 
