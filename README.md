@@ -3,7 +3,7 @@ Works with SharePoint 2013, 2016 and SPOnline
 
 Angular View and Controller are automatically generated and applied to the target SharePoint list of your choice.
 ### Warning:
-Disable Minimal Download Strategy. Otherwise Angular form will not render properly.
+Disable [Minimal Download Strategy](http://www.sharepointdiary.com/2015/02/disable-minimal-download-strategy-mds-in-sharepoint-2013.html) site feature. Otherwise Angular form will not render properly.
 
 ![Form Sample](https://github.com/Zerg00s/AngularForms/blob/master/FormSample.jpg?raw=true)
 
